@@ -22,4 +22,4 @@ def apply_fct_inverse(x_n):
 
 
 def remove_aberration(gh_aberration):
-    return [apply_fct_inverse(x_n) for x_n in gh_aberration]
+    return np.array([apply_fct_inverse(x_n) for x_n in gh_aberration])
