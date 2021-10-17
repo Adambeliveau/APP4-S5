@@ -7,9 +7,9 @@ class Compression:
         mat_cov = np.cov(img_filtered)
         _, self.eigenvectors = np.linalg.eig(mat_cov)
 
-    def compression(self):
+    def compression(self, compression_lvl):
         img_v = np.matmul(self.eigenvectors.T, self.img_filtered)
-        img_v[3*int(len(img_v)/10):] = 0
+        img_v[int((1-(compression_lvl/10))*len(img_v)):] = 0
         return img_v
 
     def decompression(self, img_compressed):

@@ -33,12 +33,16 @@ if __name__ == '__main__':
 
     # compression
     compression_obj = Compression(img_filtered_bilineaire)
-    img_compressed = compression_obj.compression()
-    plt.imsave('Ressources/img_compressed.png', img_compressed)
+    img_compressed_50 = compression_obj.compression(5)
+    img_compressed_70 = compression_obj.compression(7)
+    plt.imsave('Ressources/img_compressed_50.png', img_compressed_50)
+    plt.imsave('Ressources/img_compressed_70.png', img_compressed_70)
 
     # decompression
-    img_decompressed = compression_obj.decompression(img_compressed)
-    plt.imsave('Ressources/img_decompressed.png', img_decompressed)
+    img_decompressed_50 = compression_obj.decompression(img_compressed_50)
+    img_decompressed_70 = compression_obj.decompression(img_compressed_70)
+    plt.imsave('Ressources/img_decompressed_50.png', img_decompressed_50)
+    plt.imsave('Ressources/img_decompressed_70.png', img_decompressed_70)
 
 
 
