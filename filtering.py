@@ -1,6 +1,5 @@
 import numpy as np
 from scipy import signal
-import matplotlib.pyplot as plt
 
 
 def transfer_fct(method: str):
